@@ -1,33 +1,16 @@
-package com.example.accountservice.domain;
+package com.example.webapp.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
-//@Table(name="ACCOUNTS")
-@Entity
-public class Account {
+public class Account implements Serializable {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
-    @Id//Pk
-    @Column(name="ACCOUNTID")
     Integer accountId;
-
-    @Column(name="BALANCE")
     Double balance;
-
-    @Column(name="CUSTOMERID")
     Integer customerId;
-
-    @Column(name="ACCOUNTTYPE")
     String accountType;
-
-    @Column(name="BRANCHCODE")
     String branchCode;
-
-    @Column(name="BANK")
     String bank;
 
     public Account() {
